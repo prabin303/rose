@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Day Surprise</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffcccc, #ff99cc);
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 102, 0.3);
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+
+        h1 {
+            color: #b3003b;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(255, 0, 102, 0.3);
+        }
+
+        p {
+            color: #660033;
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .rose {
+            width: 120px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { filter: brightness(1); }
+            100% { filter: brightness(1.3); }
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            color: white;
+            background: #ff3366;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background: #cc0052;
+        }
+
+        /* Floating Petals */
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: pink;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(100vh); opacity: 1; }
+        }
+
+        /* Generating Multiple Petals */
+        .petal:nth-child(1) { left: 10%; animation-duration: 4s; }
+        .petal:nth-child(2) { left: 30%; animation-duration: 6s; }
+        .petal:nth-child(3) { left: 50%; animation-duration: 5s; }
+        .petal:nth-child(4) { left: 70%; animation-duration: 7s; }
+        .petal:nth-child(5) { left: 90%; animation-duration: 6.5s; }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌹 Behold! The Rose of Destiny 🌹</h1>
+        <p> The universe conspired, the stars held their breath, and time itself pirouetted just to place this delicate rebellion of petals for you. </p>
+        <p><strong>Is it love? Yes, it is. Will you accept it? 🙏</strong></p>
+        <img src="ros.png" alt="Rose" class="rose">
+        <br>
+        <button class="button">Accept the Rose 🌹</button>
+    </div>
+
+    <!-- Floating Petals -->
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+</body>
+</html>
